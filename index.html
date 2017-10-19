@@ -1,6 +1,21 @@
 <html>
 <head></head>
 <body>
-	<h3>Test repo</h3>
+public interface IHttpClientWrapper
+{
+    HttpResponseMessage Get(string url);
+}
+
+public class HttpClientWrapper : IHttpClientWrapper
+{
+	public HttpResponseMessage Get(string url)
+	{
+		using (var client = new HttpClient())
+		{
+			return client.GetAsync(url).Result;
+		}
+	}
+}
+
 </body>
 </html>
