@@ -1,21 +1,7 @@
 <html>
 <head></head>
 <body>
-public interface IHttpClientWrapper
-{
-    HttpResponseMessage Get(string url);
-}
-
-public class HttpClientWrapper : IHttpClientWrapper
-{
-	public HttpResponseMessage Get(string url)
-	{
-		using (var client = new HttpClient())
-		{
-			return client.GetAsync(url).Result;
-		}
-	}
-}
-
+	<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+	<div class="coinmarketcap-currency-widget" data-currency="iota" data-base="USD"  data-secondary="BTC"></div>
 </body>
 </html>
