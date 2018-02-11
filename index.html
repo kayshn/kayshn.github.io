@@ -82,22 +82,31 @@
             <div class="row">
                 <div class="four columns">
                     <h6>Computer science</h6>
+                    <ul>
+
+                    </ul>
 
                 </div>
                 <div class="four columns">
                     <h6>Algos & Data structures</h6>
+                    <ul>
 
+                    </ul>
                 </div>
                 <div class="four columns">
                     <h6>Compilers & Languages</h6>
+                    <ul>
 
+                    </ul>
                 </div>
             </div>
 
             <div class="row">
                 <div class="four columns">
                     <h6>Networks</h6>
+                    <ul>
 
+                    </ul>
                 </div>
                 <div class="four columns">
                     <h6>HTTP</h6>
@@ -127,11 +136,15 @@
             <div class="row">
                 <div class="four columns">
                     <h6>Design</h6>
+                    <ul>
 
+                    </ul>
                 </div>
                 <div class="four columns">
                     <h6>Linux</h6>
+                    <ul>
 
+                    </ul>
                 </div>
                 <div class="four columns">
                     <h6>.Net</h6>
@@ -150,6 +163,14 @@
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="site.js"></script>
+
+    <script>
+        $(document).ready({
+            $('.columns h6').click(()=> {
+                $(this).parent().find('ul').toggle();
+            });
+        });
+    </script>
 </body>
 
 </html>
