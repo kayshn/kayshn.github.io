@@ -235,3 +235,5 @@ ul li {
 .docs-header { background: #efefef; padding: 1rem; }
 
 #links .columns.four { min-height: 30rem; }
+#links .columns a { font-size: 1.2rem;}
+#links .columns h6 { border-bottom: 1px solid #ccc; }
