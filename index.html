@@ -1,9 +1,9 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="skeleton.css" />
-    <link rel="stylesheet" href="custom.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/custom.css" />
 </head>
 
 <body>
@@ -72,104 +72,40 @@
             </div>
         </nav>
 
-        <div class="docs-section" id="links">
-
-        </div>
-
-        <div class="docs-section" id="links">
+        <div class="docs-section" id="links1">
             <h6 class="docs-header">Links</h6>
+            <div class="row" id="linkList">
 
-            <div class="row">
-                <div class="four columns">
-                    <h6>Computer fundamentals</h6>
-                    <ul>
-
-                    </ul>
-
-                </div>
-                <div class="four columns">
-                    <h6>Algos & Data structures</h6>
-                    <ul>
-						<a href="https://www.hackerrank.com/dashboard">Challenges - HackerRank</a>
-						<a href="http://opendatastructures.org/ods-python.pdf">(pdf) Open Data Structures</a>
-						<a href="https://cses.fi/book.pdf">(pdf) Competitive Programmer's handbook</a>
-                    </ul>
-                </div>
-                <div class="four columns">
-                    <h6>Compilers & Languages</h6>
-                    <ul>
-
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="four columns">
-                    <h6>Networks</h6>
-                    <ul>
-
-                    </ul>
-                </div>
-                <div class="four columns">
-                    <h6>HTTP</h6>
-                    <ul>
-                        <li>
-                            <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">HTTP - MDN</a>
-                        </li>
-                    </ul>
-
-                </div>
-                <div class="four columns">
-                    <h6>OAuth</h6>
-                    <ul>
-                        <li>
-                            <a href="https://jwt.io/" target="_blank">JWT</a>
-                        </li>
-                        <li>
-                            <a href="https://openidconnect.net/" target="_blank">OpenID Connect Playground</a>
-                        </li>
-                        <li>
-                            <a href="https://tools.ietf.org/html/rfc6749#section-1.3.4">RFC 6749</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="four columns">
-                    <h6>Design</h6>
-                    <ul>
-
-                    </ul>
-                </div>
-                <div class="four columns">
-                    <h6>Linux</h6>
-                    <ul>
-
-                    </ul>
-                </div>
-                <div class="four columns">
-                    <h6>.Net</h6>
-                    <ul>
-                        <li>
-                            <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?tabs=aspnetcore2x">Kestrel</a>
-                        </li>
-                        <li>
-                            <a href="https://docs.microsoft.com/en-us/dotnet/core/tools/?tabs=netcore2x">CLI tools</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
 
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="site.js"></script>
+    <script src="js/site.js"></script>
 
     <script>
         $(document).ready(function () {
             $(".columns h6").click(function () {
                 $(this).parent().parent().find('ul').toggle();
+            });
+
+            $.getJSON("json/links.json", function (data) {
+                $.each(data.data, function (key, val) {
+                    if (val.links && val.links.length > 0) {
+
+                        var items = [];
+                        $.each(val.links, function (i, j) {
+                            items.push("<li><a href=" + j.link + ">" + j.name + "</a></li>");
+                        });
+
+                        var heading = "<h6>" + val.name + "</h6>";
+
+                        $("<div />", {
+                            "class": "four columns",
+                            html: heading + items.join("")
+                        }).appendTo("#linkList");
+                    }
+                });
             });
         });
     </script>

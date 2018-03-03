@@ -1,0 +1,80 @@
+{
+    "data": [
+        {
+            "name": "Network",
+            "links": []
+        },
+        {
+            "name": "HTTP",
+            "links": [
+                {
+                    "name": "HTTP - MDN",
+                    "link": "https://developer.mozilla.org/en-US/docs/Web/HTTP"
+                }
+            ]
+        },
+        {
+            "name": "Computer fundamentals",
+            "links": []
+        },
+        {
+            "name": "Algos & Data structures",
+            "links": [
+                {
+                    "name": "Challenges - HackerRank",
+                    "link": "https://www.hackerrank.com/dashboard"
+                },
+                {
+                    "name": "(pdf) Open Data Structures",
+                    "link": "http://opendatastructures.org/ods-python.pdf"
+                },
+                {
+                    "name": "(pdf) Competitive Programmer's handbook",
+                    "link": "https://cses.fi/book.pdf"
+                }
+            ]
+        },
+        {
+            "name": "Compilers & Languages",
+            "links": []
+        },
+        {
+            "name": "OAuth",
+            "links": [
+                {
+                    "name": "JWT",
+                    "link": "https://jwt.io"
+                },
+                {
+                    "name": "OpenID Connect Playground",
+                    "link": "https://openidconnect.net"
+                },
+                {
+                    "name": "RFC 6749",
+                    "link": "https://tools.ietf.org/html/rfc6749#section-1.3.4"
+                }
+            ]
+        },
+        {
+            "name": "Software Design",
+            "links": []
+        },
+        {
+            "name": "Linux",
+            "links": []
+        },
+        {
+            "name": ".Net",
+            "links": [
+                {
+                    "name": "Kestrel",
+                    "link": "https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?tabs=aspnetcore2x"
+                },
+                {
+                    "name": "CLI tools",
+                    "link": "https://docs.microsoft.com/en-us/dotnet/core/tools/?tabs=netcore2x"
+                }
+            ]
+        }
+    ]
+}
