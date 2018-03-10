@@ -21,8 +21,8 @@
             "name": "Algos & Data structures",
             "links": [
                 {
-                    "name": "Challenges - HackerRank",
-                    "link": "https://www.hackerrank.com/dashboard"
+                    "name": "Mathematics for computer science",
+                    "link": "https://courses.csail.mit.edu/6.042/spring17/mcs.pdf"
                 },
                 {
                     "name": "(pdf) Open Data Structures",
@@ -31,6 +31,10 @@
                 {
                     "name": "(pdf) Competitive Programmer's handbook",
                     "link": "https://cses.fi/book.pdf"
+                },
+                {
+                    "name": "Challenges - HackerRank",
+                    "link": "https://www.hackerrank.com/dashboard"
                 }
             ]
         },
