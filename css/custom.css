@@ -103,8 +103,8 @@ ul li, li {
 /* Larger than phone */
 @media (min-width: 550px) {
   .header {
-    margin-top: 16rem; 
-    margin-bottom: 4rem;
+    margin-top: 12rem; 
+    margin-bottom: 8rem;
   }
   .navbar .navbar-item {
     display: block;
@@ -260,9 +260,9 @@ ul li, li {
 }
 
 .logo {
-  padding: 1rem 0;
+  padding: 0.90rem 0;
   margin-right: 2rem;
 }
 .logo img {
-  width: 100px;
+  width: 120px;
 }
