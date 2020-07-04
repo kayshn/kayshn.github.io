@@ -1,68 +1,80 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <title>Code Plant</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
     <link rel="stylesheet" href="css/custom.css" />
-    <script>
-  (function(apiKey){
-    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
-      v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
-      o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-      y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-      z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
-
-    // Call this whenever information about your visitors becomes available
-    // Please use Strings, Numbers, or Bools for value types.
-    pendo.initialize({
-      visitor: {
-        id:              'K1_DUMMY-ID',   // Required if user is logged in
-        // email:        // Optional
-        role: 'Admin'        // Optional
-
-        // You can add any additional visitor level key-values here,
-        // as long as it's not one of the above reserved names.
-      },
-
-      account: {
-        id:           'K1-DUMMY-ACC-ID', // Highly recommended
-        name:        'K1', // Optional
-        planLevel:  'SILVER'  // Optional
-        // planPrice:    // Optional
-        // creationDate: // Optional
-
-        // You can add any additional account level key-values here,
-        // as long as it's not one of the above reserved names.
-      }
-    });
-  })('f9347a71-d8eb-49a9-43b1-6f80c120fe3c');
-</script>
-        
 </head>
 
 <body>
     <div class="container">
-
         <nav class="navbar">
             <div class="container">
                 <ul class="navbar-list">
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="/">Home</a>
+                    <li class="navbar-item logo">
+                        <a href="/"><img src="/img/logo3.png" class="logo" alt="Plant Code"></a>
                     </li>
                     <li class="navbar-item">
-                        <a class="navbar-link" href="#links">Links</a>
+                        <a class="navbar-link" href="#about">Services</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
-
+        <section class="header">
+            <h2 class="title">Engineering cloud web solutions</h2>
+        </section>
+        <!-- <div class="value-props row">
+            <div class="four columns value-prop">
+              <img class="value-img" src="images/feather.svg">
+              Engineering web solutions.
+            </div>
+            <div class="four columns value-prop">
+              <img class="value-img" src="images/pens.svg">
+              Engineering web solutions.
+            </div>
+            <div class="four columns value-prop">
+              <img class="value-img" src="images/watch.svg">
+              Engineering web solutions.
+            </div>
+          </div> -->
+        <div class="docs-section" id="about">
+            <h6 class="docs-header">Services</h6>
+            <ul>
+                <li>Engineering cloud based web solutions.</li>
+                <li>Automating releases and deployments.</li>
+                <li>Lightweight, practical and minimal web designs.</li>
+            </ul>
+        </div>
+        <div class="docs-section" id="contact">
+            <h6 class="docs-header">Contact</h6>
+            <p>
+                <input class="button-primary"
+                type="submit"
+                onclick="window.open('mailto:info@codeplant.co.uk?subject=Contact&body=Hello');" value="Email me" />
+                <br/>
+                Contact me at:
+                <a href="mailto:info@codeplant.co.uk">info@codeplant.co.uk</a>
+            </p>
+        </div>
         <div class="docs-section" id="links">
             <h6 class="docs-header">Links</h6>
-            <div class="row" id="linkList">
-
-            </div>
+            <div class="row" id="linkList"></div>
         </div>
 
+        <div class="footer">
+            <p>© Copyright 2020 Code Plant - Software & Web Engineering London UK.</p>
+        </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="js/site.js"></script>
@@ -79,7 +91,8 @@
 
                         var items = [];
                         $.each(val.links, function (i, j) {
-                            items.push("<li><a target='_blank' href=" + j.link + ">" + j.name + "</a></li>");
+                            items.push("<li><a target='_blank' href=" + j.link + ">" + j
+                                .name + "</a></li>");
                         });
 
                         var heading = "<h6>" + val.name + "</h6>";

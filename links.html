@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Code Plant</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="container">
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="/">About</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="navbar-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row" id="linkList"></div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/site.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".columns h6").click(function () {
+                $(this).parent().parent().find('ul').toggle();
+            });
+
+            $.getJSON("json/links.json", function (data) {
+                $.each(data.data, function (key, val) {
+                    if (val.links && val.links.length > 0) {
+
+                        var items = [];
+                        $.each(val.links, function (i, j) {
+                            items.push("<li><a target='_blank' href=" + j.link + ">" + j
+                                .name + "</a></li>");
+                        });
+
+                        var heading = "<h6>" + val.name + "</h6>";
+
+                        $("<div />", {
+                            "class": "four columns",
+                            html: heading + items.join("")
+                        }).appendTo("#linkList");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
